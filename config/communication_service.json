@@ -1,0 +1,31 @@
+{
+  "server": {
+    "port": 8020,
+    "prometheus.port": 8025
+  },
+  "kafka": {
+    "bootstrap.servers": "localhost:9092",
+    "acks": -1,
+    "compression.type": "none",
+    "batch.num.messages": 10,
+    "queue.buffering.max.ms": 10,
+    "queue.buffering.max.messages": 10
+  },
+  "communication.event.topics": {
+    "whatsapp.low.priority": "low_priority_whatsapp_communication_events",
+    "whatsapp.high.priority": "high_priority_whatsapp_communication_events",
+    "sms.low.priority": "low_priority_sms_communication_events",
+    "sms.high.priority": "high_priority_sms_communication_events",
+    "pn.low.priority": "low_priority_pn_communication_events",
+    "pn.high.priority": "high_priority_pn_communication_events",
+    "email.low.priority": "low_priority_email_communication_events",
+    "email.high.priority": "high_priority_email_communication_events",
+    "default": "communication_events"
+  },
+  "temporal": {
+    "worker": {
+      "namespace": "default",
+      "address": "localhost:7233"
+    }
+  }
+}

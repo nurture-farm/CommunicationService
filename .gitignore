@@ -1,0 +1,10 @@
+.DS_Store
+
+# Generated build file
+main
+
+# Go vendor files
+vendor/
+
+.idea/
+*.iml
